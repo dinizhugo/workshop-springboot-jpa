@@ -25,7 +25,7 @@ public class Order implements Serializable {
     private Integer orderStatus;
 
     @ManyToOne
-    @JoinColumn(name = "cleint_id")
+    @JoinColumn(name = "client_id")
     private User client;
 
     @OneToMany(mappedBy = "id.order")
@@ -78,6 +78,7 @@ public class Order implements Serializable {
     public Set<OrderItem> getItems() {
         return items;
     }
+
 
     @Override
     public boolean equals(Object o) {
